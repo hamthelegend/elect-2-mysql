@@ -18,7 +18,7 @@ CREATE TABLE blogs
     blog_id         INT         NOT NULL AUTO_INCREMENT,
     title           VARCHAR(20) NOT NULL,
     body            TEXT        NOT NULL,
-    creation_date   DATE,
+    creation_date   DATE        NOT NULL,
     author_username VARCHAR(20) NOT NULL,
     PRIMARY KEY (blog_id),
     INDEX fk_username_idx (author_username ASC) VISIBLE,
@@ -33,7 +33,7 @@ CREATE TABLE comments
 (
     comment_id      INT         NOT NULL AUTO_INCREMENT,
     body            TEXT        NOT NULL,
-    creation_date   DATE,
+    creation_date   DATE        NOT NULL,
     author_username VARCHAR(20) NOT NULL,
     blog_id         INT         NOT NULL,
     PRIMARY KEY (comment_id),
